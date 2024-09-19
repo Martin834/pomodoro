@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>POMODORO</title>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <p id="test"></p>
+        <h1>POMODORO TIMER</h1>
+
+        <div id="decompte">
+            <ul>
+                <li><span id="minutes">25</span></li>
+                <li><span>:</span></li>
+                <li><span id="secondes">0</span></li>
+            </ul>
+        </div>
+
+        <h1 id="moment_travail"></h1>
+        <h1 id="moment_pause"></h1>
+
+        <img src="squirrel.png">
+        <br><br>
+
+        <button onclick="lanceTimerTravail()" id="lance">LANCER</button>
+        <button onclick="resetPage()" id="reset">RESET</button>
+    </body>
+</html>
