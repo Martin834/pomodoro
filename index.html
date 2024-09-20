@@ -3,6 +3,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>POMODORO</title>
         <script defer src="script.js"></script>
         <link rel="stylesheet" href="style.css">
@@ -12,7 +13,7 @@
         <p id="test"></p>
         <h1>POMODORO TIMER</h1>
 
-        <div id="decompte">
+        <div align="center" id="decompte">
             <ul>
                 <li><span id="minutes">25</span></li>
                 <li><span>:</span></li>
@@ -23,9 +24,11 @@
         <h1 id="moment_travail"></h1>
         <h1 id="moment_pause"></h1>
 
-        <img src="images/squirrel.png">
+        <img id="squ" src="images/squirrel.png">
         <br><br>
 
         <button onclick="lanceTimer()" id="lance">LANCER</button>
+
+        <audio autoplay loop src="sons/aquickone.mp3"></audio>
     </body>
 </html>
