@@ -4,14 +4,14 @@ h1 {
     
 }
 
-li {
-    display: inline-block;
+span {
     list-style-type: none;
     text-transform: uppercase;
 }
 
-li span {
+div span {
     font-size: 75px;
+    margin: 20px;
 }
 
 body {
@@ -20,5 +20,13 @@ body {
 }
 
 #decompte {
-    background-color: aqua;
+    display:flex;
+    justify-content:center;
+}
+
+#lance {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    margin:auto;
 }

@@ -10,25 +10,24 @@
     </head>
 
     <body>
+        <audio autoplay loop hidden>
+            <source src="sons/aquickone.mp3" type="audio/mp3">
+            LAUDIO NEST PAS SUPPORTE PAR VOTRE PLATEFORME
+        </audio>
+
         <p id="test"></p>
         <h1>POMODORO TIMER</h1>
 
-        <div align="center" id="decompte">
-            <ul>
-                <li><span id="minutes">25</span></li>
-                <li><span>:</span></li>
-                <li><span id="secondes">0</span></li>
-            </ul>
+        <div id="decompte">
+            <span id="minutes">25</span>
+            <span>:</span>
+            <span id="secondes">0</span>
         </div>
-
-        <h1 id="moment_travail"></h1>
-        <h1 id="moment_pause"></h1>
-
-        <img id="squ" src="images/squirrel.png">
-        <br><br>
 
         <button onclick="lanceTimer()" id="lance">LANCER</button>
 
-        <audio autoplay loop src="sons/aquickone.mp3"></audio>
+        <h3 id="moment_travail"></h3>
+        <h3 id="moment_pause"></h3>
+
     </body>
 </html>

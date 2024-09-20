@@ -2,14 +2,13 @@ let m = 25
 let s = 0
 let travail = true
 
-let reset = document.createElement("button")
-reset.textContent = "RESET"
-reset.addEventListener("mousedown", resetPage)
+let alerte = new Audio('sons/alerte.mp3')
 
 function lanceTimer() {
-    document.getElementById("lance").remove()
-    document.body.appendChild(reset)
-    document.getElementById("moment_travail").textContent = "ALLER AU BOULOT PETITE LARVE JE TE SURVAILLE"
+    document.getElementById("lance").textContent = "RESET"
+    document.getElementById("lance").addEventListener("mousedown", resetPage)
+
+    document.getElementById("moment_travail").textContent = "Travaille bien cher ami"
 
     const timer = setInterval(function() {
         document.getElementById("minutes").textContent = m
@@ -18,17 +17,19 @@ function lanceTimer() {
         if (m == 0 && s == 0) {
             if (travail == true) {
                 travail = false
-                document.getElementById("moment_pause").textContent = "VA EN PAUSE LA"
+                document.getElementById("moment_pause").textContent = "C'est la pause !"
                 document.getElementById("moment_travail").textContent = ""
                 m = 5
                 s = 0
+                alerte.play()
             }
             else {
                 travail = true
-                document.getElementById("moment_travail").textContent = "ALLER AU BOULOT PETITE LARVE JE TE SURVAILLE"
+                document.getElementById("moment_travail").textContent = "Allez hop hop au boulot !"
                 document.getElementById("moment_pause").textContent = ""
                 m = 25
                 s = 0
+                alerte.play()
             }
         }
 
