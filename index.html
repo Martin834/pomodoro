@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>POMODORO</title>
+        <title>Pomodoro de Martin Bazoge</title>
         <script defer src="script.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -18,16 +18,41 @@
         <p id="test"></p>
         <h1>POMODORO TIMER</h1>
 
-        <div id="decompte">
-            <span id="minutes">25</span>
-            <span>:</span>
-            <span id="secondes">0</span>
-        </div>
+        <br><br><br><br>
 
-        <button onclick="lanceTimer()" id="lance">LANCER</button>
+        <div id="bloc_principal">
+            <div id="change">
+                <div id="tmp_travail">
+                    <span>Temps de travail :</span>
+                    <span>➕</span>
+                    <span id="set_minutes_travail">25</span>
+                    <span>:</span>
+                    <span id="set_secondes_travail">0</span>
+                    <span>➖</span>
+                </div>
+                <div id="tmp_pause">
+                    <span>Temps de pause :</span>
+                    <span>➕</span>
+                    <span id="set_minutes_pause">5</span>
+                    <span>:</span>
+                    <span id="set_secondes_pause">0</span>
+                    <span>➖</span>
+                </div>
+            </div>
+
+            <button onclick="lanceTimer()" id="lance">LANCER</button>
+
+            <div id="decompte">
+                <span id="minutes">25</span>
+                <span id="dp_dec">:</span>
+                <span id="secondes">0</span>
+            </div>
+        </div>
 
         <h3 id="moment_travail"></h3>
         <h3 id="moment_pause"></h3>
+
+        
 
     </body>
 </html>

@@ -1,32 +1,51 @@
-h1 {
-    font-size: 70px;
-    text-align: center;
-    
-}
-
-span {
-    list-style-type: none;
-    text-transform: uppercase;
-}
-
-div span {
-    font-size: 75px;
-    margin: 20px;
-}
-
 body {
     background-image: url(images/fond_decran.jpg);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#decompte {
+h1 {
+    font-size: 5vw;
+    text-align: center;
+    
+}
+
+#bloc_principal {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#minutes, #secondes, #dp_dec {
+    margin: 1vw;
+    font-size: 5vw;
+}
+
+span {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#tmp_travail, #tmp_pause {
+    flex-basis: 100%;
+    margin: 1vw;
+    font-size:2vw;
+}
+
+#change {
     display:flex;
     justify-content:center;
+    flex-wrap:wrap;
+    flex-basis:40%;
 }
 
 #lance {
-    display: flex;
-    justify-content: center;
     font-size: large;
+    flex-basis:20%;
+}
+
+#decompte {
+    display:flex;
+    justify-content:center;
     margin:auto;
+    flex-basis:40%;
 }
