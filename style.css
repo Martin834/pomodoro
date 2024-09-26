@@ -80,6 +80,7 @@ span {
     flex-wrap:wrap;
     flex-basis:33.33%;
     margin: 2vw;
+    font-size: 10vw;
 }
 
 #decompte {
