@@ -30,27 +30,24 @@
         <div id="bloc_principal">
             <div id="change">
                 <div id="tmp_travail">
-                    <span>Temps de travail :</span>
-                    <button onclick="changeTemps(-30, true)" id="descend_travail">-</button>
-                    <span id="set_minutes_travail">25</span>
-                    <span>:</span>
-                    <span id="set_secondes_travail">0</span>
-                    <button onclick="changeTemps(30, true)" id="monte_travail">+</button>
+                    <span class="dans_tmp_travail">• Temps de travail :</span>
+                    <button class="dans_tmp_travail" onclick="changeTemps(-30, true)" id="descend_travail">-</button>
+                    <span class="dans_tmp_travail" id="set_minutes_travail">25</span>
+                    <span class="dans_tmp_travail">:</span>
+                    <span class="dans_tmp_travail" id="set_secondes_travail">0</span>
+                    <button class="dans_tmp_travail" onclick="changeTemps(30, true)" id="monte_travail">+</button>
                 </div>
                 <div id="tmp_pause">
-                    <span>Temps de pause :</span>
-                    <button onclick="changeTemps(-30, false)" id="descend_pause">-</button>
-                    <span id="set_minutes_pause">5</span>
-                    <span>:</span>
-                    <span id="set_secondes_pause">0</span>
-                    <button onclick="changeTemps(30, false)" id="monte_pause">+</button>
+                    <span class="dans_tmp_travail">• Temps de pause :</span>
+                    <button class="dans_tmp_travail" onclick="changeTemps(-30, false)" id="descend_pause">-</button>
+                    <span class="dans_tmp_travail" id="set_minutes_pause">5</span>
+                    <span class="dans_tmp_travail">:</span>
+                    <span class="dans_tmp_travail" id="set_secondes_pause">0</span>
+                    <button class="dans_tmp_travail" onclick="changeTemps(30, false)" id="monte_pause">+</button>
                 </div>
             </div>
 
-            <div>
-                <em id="lance" onclick="lanceTimer()" class="fa-solid fa-play"></em>
-                <em id="reset" onclick="resetPage()" id="boutonn" class="fa-solid fa-arrow-rotate-left"></em>
-            </div>
+            <span id="start" class="fa-solid fa-play fa-10x"></span>
 
             <div id="decompte">
                 <span id="minutes">25</span>

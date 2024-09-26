@@ -9,7 +9,19 @@ let s_pause = 0
 let travail = true
 let alerte = document.getElementById("alerte")
 
+let startBtn = document.getElementById("start")
+
+startBtn.addEventListener("click", () => {
+    startBtn.classList.remove("fa-play")
+    startBtn.classList.add("fa-arrows-rotate")
+    lanceTimer()
+})
+
 function lanceTimer() {
+    
+    startBtn.addEventListener("click", () => {
+        window.location.reload()
+    })
 
     document.getElementById("moment_travail").textContent = "Travaille bien cher ami"
 
@@ -50,10 +62,6 @@ function lanceTimer() {
             s--
         }
     }, 1000)
-}
-
-function resetPage() {
-    window.location.reload()
 }
 
 function changeTemps(nb_secondes, travail) {
