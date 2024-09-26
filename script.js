@@ -1,4 +1,4 @@
-
+// Initialisation des variables
 
 let m = 25
 let s = 0
@@ -10,7 +10,7 @@ let travail = true
 let alerte = document.getElementById("alerte")
 
 let startBtn = document.getElementById("start")
-
+// Detecte quand le bouton start est appuyé puis change se forme et lance le timer
 startBtn.addEventListener("click", () => {
     startBtn.classList.remove("fa-play")
     startBtn.classList.add("fa-arrows-rotate")
@@ -19,6 +19,7 @@ startBtn.addEventListener("click", () => {
 
 function lanceTimer() {
     
+    // si le bouton reload est appuyé, la page est reload
     startBtn.addEventListener("click", () => {
         window.location.reload()
     })
