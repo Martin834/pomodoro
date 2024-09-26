@@ -9,16 +9,7 @@ let s_pause = 0
 let travail = true
 let alerte = document.getElementById("alerte")
 
-document.getElementById("lance").style.background = "url('/images/play.png')"
-
 function lanceTimer() {
-
-    console.log(document.getElementById("boutonnn").classList)
-
-    document.getElementById("boutonnn").visible = false
-    
-
-    document.getElementById("lance").addEventListener("mousedown", resetPage)
 
     document.getElementById("moment_travail").textContent = "Travaille bien cher ami"
 

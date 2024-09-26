@@ -54,11 +54,11 @@ span {
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    flex-basis:40%;
+    flex-basis:30%;
     margin-left: 1vw;
 }
 
-#lance {
+#lance, #reset {
     font-size: large;
     flex-basis:20%;
 }
@@ -67,5 +67,5 @@ span {
     display:flex;
     justify-content:center;
     margin:1vw;
-    flex-basis:40%;
+    flex-basis:30%;
 }
