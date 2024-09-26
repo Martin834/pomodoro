@@ -5,11 +5,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Pomodoro de Martin Bazoge</title>
-        <script defer src="script.js"></script>
+        <script src="https://kit.fontawesome.com/c202c92920.js" crossorigin="anonymous"></script>
+
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
+
+        <audio hidden id="alerte">
+            <source src="sons/alerte.mp3" type="audio/mp3">
+            LAUDIO NEST PAS SUPPORTE PAR VOTRE PLATEFORME
+        </audio>
 
         <audio autoplay loop hidden>
             <source src="sons/aquickone.mp3" type="audio/mp3">
@@ -25,23 +31,26 @@
             <div id="change">
                 <div id="tmp_travail">
                     <span>Temps de travail :</span>
-                    <button onclick="changeTemps(-30, true)">-</button>
+                    <button onclick="changeTemps(-30, true)" id="descend_travail">-</button>
                     <span id="set_minutes_travail">25</span>
                     <span>:</span>
                     <span id="set_secondes_travail">0</span>
-                    <button onclick="changeTemps(30, true)">+</button>
+                    <button onclick="changeTemps(30, true)" id="monte_travail">+</button>
                 </div>
                 <div id="tmp_pause">
                     <span>Temps de pause :</span>
-                    <button onclick="changeTemps(-30, false)">-</button>
+                    <button onclick="changeTemps(-30, false)" id="descend_pause">-</button>
                     <span id="set_minutes_pause">5</span>
                     <span>:</span>
                     <span id="set_secondes_pause">0</span>
-                    <button onclick="changeTemps(30, false)">+</button>
+                    <button onclick="changeTemps(30, false)" id="monte_pause">+</button>
                 </div>
             </div>
 
-            <button onclick="lanceTimer()" id="lance">LANCER</button>
+            <button onclick="lanceTimer()" id="lance">
+                <em id="boutonnn" class="fa-solid fa-play"></em>
+                <em id="boutonn"class="fa-solid fa-arrow-rotate-left"></em>
+            </button>
 
             <div id="decompte">
                 <span id="minutes">25</span>
@@ -55,5 +64,6 @@
         <h3 id="moment_travail"></h3>
         <h3 id="moment_pause"></h3>
 
+         <script defer src="script.js"></script>
     </body>
 </html>

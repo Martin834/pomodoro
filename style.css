@@ -12,7 +12,11 @@ body {
         background-size:cover;
         background-repeat: no-repeat;
     }
-  }
+}
+
+#lance {
+    size: 1vw;
+}
 
 h1 {
     font-size: 6vw;

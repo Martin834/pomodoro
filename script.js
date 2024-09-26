@@ -1,21 +1,31 @@
+
+
 let m = 25
 let s = 0
-
 let m_travail = 25
 let s_travail = 0
 let m_pause = 5
 let s_pause = 0
 let travail = true
+let alerte = document.getElementById("alerte")
 
-let alerte = new Audio('sons/alerte.mp3')
+document.getElementById("lance").style.background = "url('/images/play.png')"
 
 function lanceTimer() {
-    document.getElementById("lance").textContent = "RESET"
+
+    console.log(document.getElementById("boutonnn").classList)
+
+    document.getElementById("boutonnn").visible = false
+    
+
     document.getElementById("lance").addEventListener("mousedown", resetPage)
 
     document.getElementById("moment_travail").textContent = "Travaille bien cher ami"
 
-    
+    document.getElementById("descend_travail").disabled = true
+    document.getElementById("monte_travail").disabled = true
+    document.getElementById("descend_pause").disabled = true
+    document.getElementById("monte_pause").disabled = true
 
     const timer = setInterval(function() {
         
