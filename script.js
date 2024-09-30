@@ -26,17 +26,20 @@ function lanceTimer() {
 
     document.getElementById("moment_travail").textContent = "Travaille bien cher ami"
 
+    // désactive les boutons de changement de temps
     document.getElementById("descend_travail").disabled = true
     document.getElementById("monte_travail").disabled = true
     document.getElementById("descend_pause").disabled = true
     document.getElementById("monte_pause").disabled = true
 
+    // cette fonction se lance toutes les secondes
     const timer = setInterval(function() {
         
         document.getElementById("minutes").textContent = m
         document.getElementById("secondes").textContent = s
 
         if (m == 0 && s == 0) {
+            // quand vient le moment de la pause :
             if (travail == true) {
                 travail = false
                 document.getElementById("moment_pause").textContent = "C'est la pause !"
@@ -45,6 +48,7 @@ function lanceTimer() {
                 s = s_pause
                 alerte.play()
             }
+            // quand vient le moment de travailler :
             else {
                 travail = true
                 document.getElementById("moment_travail").textContent = "Allez hop hop au boulot !"
@@ -55,6 +59,7 @@ function lanceTimer() {
             }
         }
 
+        // ici on décrémente les variables
         else if (s == 0) {
             m--
             s = 59
@@ -65,10 +70,13 @@ function lanceTimer() {
     }, 1000)
 }
 
+// fonction modifiant le temps avec les boutons de gauche
 function changeTemps(nb_secondes, travail) {
+    // si on modifie le temps de travail, on vient ici.
     if (travail == true) {
         m_travail = document.getElementById("set_minutes_travail").textContent
         s_travail = document.getElementById("set_secondes_travail").textContent
+        // tests pour changer l'affichage des minutes / secondes
         if (nb_secondes < 0) {
             if (s_travail == 0) {
                 s_travail = 30
@@ -92,9 +100,11 @@ function changeTemps(nb_secondes, travail) {
         document.getElementById("minutes").textContent = m_travail
         document.getElementById("secondes").textContent = s_travail
     }
+    // si on modifie le temps de pause, on vient ici.
     else {
         m_pause = document.getElementById("set_minutes_pause").textContent
         s_pause = document.getElementById("set_secondes_pause").textContent
+        // tests pour changer l'affichage des minutes / secondes
         if (nb_secondes < 0) {
             if (s_pause == 0) {
                 s_pause = 30
