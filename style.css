@@ -13,7 +13,6 @@ body {
 }
 
 #lance {
-    size: 1vw;
 }
 
 h1 {
@@ -29,7 +28,6 @@ h1 {
 }
 
 .dans_tmp_travail {
-    font-size: auto;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
 }
